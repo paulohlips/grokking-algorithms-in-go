@@ -11,4 +11,13 @@ func TestFactorial(t *testing.T)  {
 			t.Errorf("got %d but want %d", got, want)
 		}
 	})
+
+	t.Run("9! = 362880", func(t *testing.T) {
+		got := Factorial(9)
+		want := 362880
+
+		if got != want {
+			t.Errorf("got %d but want %d", got, want)
+		}
+	})
 }
