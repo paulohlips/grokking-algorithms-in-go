@@ -1,5 +1,9 @@
 package cap3recursion
 
 func Factorial(num int) int {
-	return 0
+	if num == 1 {
+		return num
+	}
+
+	return num * Factorial(num-1)
 }
