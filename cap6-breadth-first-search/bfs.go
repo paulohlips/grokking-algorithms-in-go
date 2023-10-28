@@ -21,12 +21,18 @@ func main() {
 
 	queue := stack["paul"]
 
+	findNameWithBFS("henry", queue, stack)
+}
+
+func findNameWithBFS(name string, queue []string, stack Stack) {
 	for {
 		fmt.Printf("queue: %v \n", queue)
-		if "007" == queue[0] {
+
+		if name == queue[0] {
 			fmt.Print("We found the name!")
 			return
 		}
+
 		fmt.Printf("nome isnt %s!\n", queue[0])
 		queue = append(queue, stack[queue[0]]...)
 		queue = queue[1:]
