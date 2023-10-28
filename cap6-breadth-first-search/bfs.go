@@ -22,14 +22,14 @@ func main() {
 	queue := stack["paul"]
 
 	for {
-		fmt.Printf("fila: %v \n", queue)
+		fmt.Printf("queue: %v \n", queue)
 		if "007" == queue[0] {
-			fmt.Print("nome encontrado!")
+			fmt.Print("We found the name!")
 			return
 		}
-		fmt.Printf("nome não é %s!\n", queue[0])
+		fmt.Printf("nome isnt %s!\n", queue[0])
 		queue = append(queue, stack[queue[0]]...)
 		queue = queue[1:]
-		fmt.Printf("nova fila: %v \n\n\n", queue)
+		fmt.Printf("queue after update: %v \n\n\n", queue)
 	}
 }
