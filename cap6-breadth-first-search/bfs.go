@@ -12,13 +12,6 @@ func main() {
 	stack["bruce"] = append(stack["bruce"], "banner")
 	stack["bond"] = append(stack["bond"], "007")
 
-	/*
-		paul --- james --- bond
-		 |
-		 |----- bruce --- banner
-		 |----- clark
-	*/
-
 	queue := stack["paul"]
 
 	findNameWithBFS("henry", queue, stack)
