@@ -28,6 +28,11 @@ func findNameWithBFS(name string, queue []string, stack Stack) {
 	for {
 		fmt.Printf("queue: %v \n", queue)
 
+		if len(queue) == 0 {
+			fmt.Print("404 - Name not found! ")
+			return
+		}
+
 		if name == queue[0] {
 			fmt.Print("We found the name!")
 			return
